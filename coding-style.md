@@ -1,7 +1,4 @@
-
-#  EPITA - SPE - Coding style
-
-
+#  Coding style
 
 
 ## Introduction

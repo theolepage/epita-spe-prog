@@ -1,4 +1,4 @@
-#  EPITA - SPE - Programming resources
+#  Programming resources
 
 This document aims to provide a short list of resources for those of you who are willing to improve their programming skills and prepare for next year (ING1).
 
@@ -23,7 +23,7 @@ You can find plenty of online tutorials to install these programs. Do not consid
 
 ### Coding style
 
-In ING1, all the coding assignments will have to follow a strict set of guidelines concerning the syntax and format of source files. You are recommended to follow [this simplified version of EPITA's coding style](https://gist.github.com/thdoteo/0bc51648e5291843781a631ddd0744b3). It will improve the readability and the quality of your source codes. *Not applying these rules will not affect your grade.*
+In ING1, all the coding assignments will have to follow a strict set of guidelines concerning the syntax and format of source files. You are recommended to follow [this simplified version of EPITA's coding style](https://epita.thdoteo.com/coding-style). It will improve the readability and the quality of your source codes. *Not applying these rules will not affect your grade.*
 
 ### Cheat sheets
 
