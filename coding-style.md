@@ -3,24 +3,24 @@
 
 ## Introduction
 
-This documents aims to provide a set of coding rules spitted in the following parts:
-1. Name
-2. File
-3. Symbol
-4. Declaration and expression
-5. Function
-6. Control structure
-7. Documenting and comment
-8. Header
+This documents aims to provide a set of coding rules, described in the following parts.
+1. [Name](#1-name)
+2. [File](#2-file)
+3. [Symbol](#3-symbol)
+4. [Declaration and expression](#4-declaration-and-expression)
+5. [Function](#5-function)
+6. [Control structure](#6-control-structure)
+7. [Documenting and comment](#7-documenting-and-comment)
+8. [Header](#8-header)
 
 To indicate the level of requirement, this document relies on the following key words:
-- MUST = The definition is an absolute requirement.
-- MUST NOT = The definition is an absolute prohibition.
+- MUST: The definition is an absolute requirement.
+- MUST NOT: The definition is an absolute prohibition.
 - SHOULD: You are recommended to apply the definition.
-- SHOULD NOT = You are not recommended to apply the definition.
-- MAY = Applying the definition is optional.
+- SHOULD NOT: You are not recommended to apply the definition.
+- MAY: Applying the definition is optional.
 
-These key words are described in the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+These key words are described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 
 
 ## 1. Name
@@ -35,7 +35,7 @@ Names MAY be abbreviated but only when it allows for shorter code without loss o
 
 ### 1.3 name.lang
 
-Names MUST be expressed in English. Names SHOULD be expressed in correct English, i.e. without spelling mistakes.
+Names MUST be expressed in English. Names SHOULD be expressed without spelling mistakes.
 
 ### 1.4 name.case
 
@@ -63,7 +63,7 @@ The last line of this file MUST NOT be a single line feed.
 
 ### 2.4 file.indentation
 
-Indentation MUST be done using whitespaces only, tabulations MUST NOT appear in your source code.
+Indentation MUST be done using whitespaces only. Tabulations MUST NOT appear in your source code.
 
 ### 2.5 file.cols
 
@@ -88,7 +88,15 @@ All braces MUST be on their own line.
 
 ### 3.2 comma
 
-The comma MUST be followed by a single space, except when they separate arguments in function (or macro) calls and declarations and the argument list spans multiple lines: in such cases, there MUST NOT be any trailing whitespace at the end of each line.
+The comma MUST be followed by a single space. However, if the expression spans on multiple lines, the last comma MUST NOT be followed by a whitespace to avoid trailing whitespaces.
+
+```c
+int func(int a, int b, int c); // Correct
+
+// Correct
+inf long_func(int a, int b, int c,
+    int d, int e, int f);
+```
 
 ### 3.3 semicolon
 
@@ -262,7 +270,7 @@ You SHOULD NOT document the obvious.
 
 ### 7.4 comment.lang
 
-Comments MUST be written in the English language. They SHOULD NOT contain spelling errors, whatever language they are written in. However, omitting comments is no substitute for poor spelling abilities.
+Comments MUST be written in the English language. They SHOULD NOT contain spelling errors.
 
 
 

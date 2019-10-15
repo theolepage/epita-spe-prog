@@ -2,6 +2,15 @@
 
 This document aims to provide a short list of resources for those of you who are willing to improve their programming skills and prepare for next year (ING1).
 
+Lectures and practicals are available on [http://www.debug-pro.com/epita/prog/s3/](http://www.debug-pro.com/epita/prog/s3/).
+
+## Tips for practicals
+
+- Always compile your program with the flags specified in the subject (usually `-Werror -Wall -Wextra`).
+- Make sure to test your code using given functions.
+- Create your own tests by using hazardous input values.
+- Pay attention to the submission architecture (do not forget the `pw_03_arrays_sdl` folder).
+
 ## Workspace
 
 Some of you are still working on your practicals on Windows or MacOS. We recommend you work on a system similar to what is using EPITA's computers (PIE).
@@ -23,11 +32,11 @@ You can find plenty of online tutorials to install these programs. Do not consid
 
 ### Coding style
 
-In ING1, all the coding assignments will have to follow a strict set of guidelines concerning the syntax and format of source files. You are recommended to follow [this simplified version of EPITA's coding style](https://epita.thdoteo.com/coding-style). It will improve the readability and the quality of your source codes. *Not applying these rules will not affect your grade.*
+In ING1, all the coding assignments will have to follow a strict set of guidelines concerning the syntax and format of source files. You are recommended to follow [this simplified version of EPITA's coding style](https://epita.thdoteo.com/coding-style). Its aim is to improve the readability and the quality of your code. *Not applying these rules will not affect your grade.*
 
 ### Cheat sheets
 
-- Work in progress
+- WIP
 
 ## Going further
 
