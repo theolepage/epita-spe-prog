@@ -1,17 +1,9 @@
 #  Coding style
 
 
-## Introduction
 
-This documents aims to provide a set of coding rules, described in the following parts.
-1. [Name](#1-name)
-2. [File](#2-file)
-3. [Symbol](#3-symbol)
-4. [Declaration and expression](#4-declaration-and-expression)
-5. [Function](#5-function)
-6. [Control structure](#6-control-structure)
-7. [Documenting and comment](#7-documenting-and-comment)
-8. [Header](#8-header)
+
+This documents aims to provide a set of coding rules. Its content is strongly inspired by the coding style for ING1 written by EPITA's assistants.
 
 To indicate the level of requirement, this document relies on the following key words:
 - MUST: The definition is an absolute requirement.
@@ -21,6 +13,27 @@ To indicate the level of requirement, this document relies on the following key 
 - MAY: Applying the definition is optional.
 
 These key words are described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
+
+
+
+
+
+## Table of contents
+
+1. [Name](#1-name)
+2. [File](#2-file)
+3. [Symbol](#3-symbol)
+4. [Declaration and expression](#4-declaration-and-expression)
+5. [Function](#5-function)
+6. [Control structure](#6-control-structure)
+7. [Documenting and comment](#7-documenting-and-comment)
+8. [Header](#8-header)
+
+
+
+
+
 
 
 ## 1. Name
@@ -117,7 +130,7 @@ Variables SHOULD be initialized at the point of declaration.
 
 ### 4.2 decl.pointer
 
-The pointer symbol (*) in declarations MUST appear next to the variable name, not next to the type.
+The pointer symbol (*) in declarations MUST appear next to the variable name and not next to the type.
 
 ```c
 void func(const char *str);
@@ -127,9 +140,7 @@ void func(const char *str);
 
 When initializing a local structure (a C99 feature) or a static array, the initializer value MAY start on the same line as the declaration.
 
-If the initialization is too long and exceed the column limitation, the initializer value MUST start on the line after the declaration. In this case, each brace must be on their own line.
-
-This rule is an exception of the braces rule.
+If the initialization is too long and exceed the column limitation, the initializer value MUST start on the line after the declaration. In this case, each brace must be on their own line. This rule is an exception of the braces rule.
 
 ```c
 // Correct
@@ -142,7 +153,7 @@ int array[5] =
 // Crrect
 int array[5] =
 {
-	1, 2, 3
+    1, 2, 3
 };
 ```
 
@@ -156,12 +167,14 @@ Expressions MAY span over multiple lines. When a line break occurs within an exp
 
 ```c
 int very_long_var = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 
-	+ 20 + 21;
+    + 20 + 21;
 ```
 
 ### 4.6 exp.padding
 
-All binary and ternary operators MUST be padded on the left and right by one space, including assignment operators. Prefix and suffix operators MUST NOT be padded, neither on the left nor on the right. When necessary, padding is done with a single whitespace.
+All binary, ternary and assignment operators MUST be padded on the left and right by a single whitespace.
+
+Prefix and suffix operators MUST NOT be padded, neither on the left nor on the right.
 
 ### 4.7 exp.parentheses
 
@@ -195,12 +208,12 @@ The following function would then have 4 counting lines:
 ```c
 size_t array_min_index(const int *array, size_t length)
 {
-	size_t res = 0;
-	for (size_t i = 0; i < length; i++)
-	{
-		res = (array[i] < array[res]) ? i : res;
-	}
-	return res;
+    size_t res = 0;
+    for (size_t i = 0; i < length; i++)
+    {
+        res = (array[i] < array[res]) ? i : res;
+    }
+    return res;
 }
 ```
 
@@ -216,7 +229,7 @@ size_t array_min_index(const int *array, size_t length)
 
 ### 6.1 ctrl.switch
 
-Incomplete switch constructs (that is, which do not cover all cases) MUST contain a default case, unless when used over an enumeration type, in which case it SHOULD NOT contain one.
+A switch construct that do not cover all cases MUST contain a default case. However, when used over an enumeration type, it SHOULD NOT contain one.
 
 ### 6.2 ctrl.single
 
@@ -224,9 +237,11 @@ The conditional parts of if and while control structures, and the else keyword M
 
 ### 6.3 ctrl.indentation
 
-The code following a control structure MUST be indented. The number of whitespaces MUST be 4. If the code following a control structure is composed of only one expression, you MAY omit the braces.
+The code following a control structure MUST be indented by 4 spaces.
 
+### 6.4 ctrl.short
 
+If the code following a control structure is composed of only one expression, you MAY omit the braces.
 
 
 
