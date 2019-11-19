@@ -36,7 +36,9 @@ In ING1, all the coding assignments will have to follow a strict set of guidelin
 
 ### Cheat sheets
 
-- WIP
+- [Debugging with GDB](https://epita.thdoteo.com/gdb)
+- [Vim](https://epita.thdoteo.com/vim)
+- [Shell](https://epita.thdoteo.com/shell)
 
 ## Going further
 
